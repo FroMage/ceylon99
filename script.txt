@@ -1,0 +1,30 @@
+done:
+
+- main functions
+- for loop iteration
+- union types
+- intersection types
+- spread operator
+- map/comprehension
+- class attributes
+- shortcut method refinement
+- string templates
+- initialisation order
+- default parameters
+- named param invocation
+- mixin methods
+
+todo:
+
+- getter/setter
+- resolving of diamond inheritance issue (no java equivalent)
+- variance
+- multiple inheritance of same interface
+- functions
+- modules
+- assert
+- type refinement
+- null safety
+- reified generics
+- outer
+- equals
