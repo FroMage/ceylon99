@@ -2,8 +2,8 @@ class Ex7(name, age){
     shared variable String name;
     shared variable Integer age;
     
-    //shared actual String string = "Name: ``name``, Age: ``age``";
-    string = "Name: ``name``, Age: ``age``";
+    //shared actual String string = "Name: ``name``, AJavage: ``age``";
+    string = "Name: ``name``, AJavage: ``age``";
 }
 
 void ex7(){

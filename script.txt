@@ -1,30 +1,124 @@
-done:
+Ex01:
 
 - main functions
-- for loop iteration
-- union types
-- intersection types
-- spread operator
-- map/comprehension
-- class attributes
-- shortcut method refinement
-- string templates
-- initialisation order
-- default parameters
-- named param invocation
-- mixin methods
+- toplevel functions
+- how to compile/run
 
-todo:
+Ex01_2:
+
+- for loop iteration
+- segment literals
+
+Ex02:
+
+- iterable literal
+- value type inference
+- for loop iterable iteration
+
+Ex03:
+
+- union types
+- RHS inference 
+
+Ex04:
+
+- intersection types
+
+Ex05:
+
+- spread operator
+
+Ex06:
+
+- map/comprehension
+- function literals
+
+Ex07:
+
+- class attributes
+- class constructors
+- constructor invocation
+- shortcut member refinement
+- string templates
+
+Ex07_2:
 
 - getter/setter
+
+Ex08:
+
+- initialisation order
+
+Ex09:
+
+- default parameters
+- named param invocation
+
+Ex10:
+
+- default parameters can use previous param values
+
+Ex11:
+
+- mixin methods
+- fat arrow vs assignment
+- anonymous objects
+- abstract attributes
+
+Ex12:
+
 - resolving of diamond inheritance issue (no java equivalent)
-- variance
+
+Ex13:
+
+- co-variance
+- variadic parameters
+
+Ex14:
+
+- contra-variance
+- type parameter constraints
+
+Ex15:
+
 - multiple inheritance of same interface
-- functions
-- modules
-- assert
-- type refinement
+- method co-variance
+
+Ex16:
+
+- checked exceptions
+
+Ex17:
+
+- function literals
+- function types
+- environment capture
+- Callable members and constructors
+
+Ex18:
+
 - null safety
+- exists and type refinement
+
+Ex19:
+
+- "is" and type refinement
+
+Ex20:
+
+- modules
 - reified generics
+
+Ex21:
+
+- assert
+
+Ex22:
+
 - outer
+
+Ex23:
+
 - equals
+
+
