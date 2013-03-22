@@ -1,6 +1,6 @@
 class Ex23(shared String name, shared Integer age){
     shared actual Boolean equals(Object that) {
-        if(is Basic that, that === this){
+        if(is Identifiable that, that === this){
             return true;
         }
         if(is Ex23 that){
