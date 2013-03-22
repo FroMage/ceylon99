@@ -17,7 +17,7 @@ interface Right satisfies Top {
     }
 }
 
-// member f is inherited ambiguously from Left and Top and so must be refined by BJavaottom
+// member f is inherited ambiguously from Left and Top and so must be refined by Bottom
 class Bottom() satisfies Left & Right{
     shared actual void f(){
         Left::f();
