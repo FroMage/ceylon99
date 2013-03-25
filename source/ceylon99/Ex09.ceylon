@@ -3,11 +3,13 @@ class Ex09(attr){
     shared String attr2 {
         return attr.uppercased;
     }
+    // ou bien
+    //shared String attr2 => attr.uppercased;
     assign attr2 {
         attr = attr2.lowercased;
     }
     
-    string = "AJavattr: ``attr``, AJavattr2: ``attr2``";
+    string = "Attr: ``attr``, Attr2: ``attr2``";
 }
 
 void ex09(){

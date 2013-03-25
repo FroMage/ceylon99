@@ -1,5 +1,5 @@
 void ex07(){
-    value ints = {1,2,3};
+    value ints = {1, 2, 3};
     // not efficient
     //value more = ints*.plus(1)*.times(2);
     value more = {for (i in ints) (i + 1) * 2};

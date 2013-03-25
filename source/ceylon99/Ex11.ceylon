@@ -1,7 +1,7 @@
 class Ex11(String firstName = "Gerard",
-          String lastName = "Dupond",
-          Integer age = 20,
-          String title = "M"){
+           String lastName = "Dupond",
+           Integer age = 20,
+           String title = "M"){
     
     string = "``title`` ``firstName`` ``lastName`` (``age``)";
 }
@@ -9,7 +9,7 @@ class Ex11(String firstName = "Gerard",
 void ex11(){
     print(Ex11());
     print(Ex11("Stef", "Epardaud", #22, "Dr"));
-    print(Ex11{ firstName = "Emmanuel"; lastName = "BJavaernard"; age = #23; title = "M"; });
-    print(Ex11{ title = "M"; firstName = "Emmanuel"; lastName = "BJavaernard"; age = #23; });
+    print(Ex11{ firstName = "Emmanuel"; lastName = "Bernard"; age = #23; title = "M"; });
+    print(Ex11{ title = "M"; firstName = "Emmanuel"; lastName = "Bernard"; age = #23; });
     print(Ex11{ title = "Mlle"; });
 }

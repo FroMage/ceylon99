@@ -1,7 +1,7 @@
 class Ex24(){
     shared class Inner(){
         shared void m(){
-            f();
+            this.f();
             outer.f();
         }
         void f(){

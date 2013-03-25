@@ -39,7 +39,7 @@ public class Ex17Java {
 
 		// this works???
 //		CanIHasCloneJava<? super BJava> bCloneable = b;
-		// well, almost: Type mismatch: cannot convert from capture#1-of ? super BJava to AJava
-//		AJava bClone2 = bCloneable.gimmeClonez();
+		// well, almost: Type mismatch: cannot convert from capture#1-of ? super BJava to BJava
+//		BJava bClone2 = bCloneable.gimmeClonez();
 	}
 }

@@ -9,7 +9,6 @@ public class Ex08Java {
 	private int age;
 	
 	public Ex08Java(String name, int age) {
-		super();
 		this.name = name;
 		this.age = age;
 	}

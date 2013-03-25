@@ -4,7 +4,7 @@ public class Ex24Java {
 
 	class Inner {
 		void m(){
-			f();
+			this.f();
 			Ex24Java.this.f();
 		}
 		void f(){

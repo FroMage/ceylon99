@@ -31,7 +31,7 @@ class Ex16MapJava<Key,Item> {
 public class Ex16Java {
 	
 	public static void main(String[] args) {
-		Ex16MapJava<Number, String> map = new Ex16MapJava<Number, String>(new EntryJava<Number,String>(1, "fu"), new EntryJava<Number,String>(1, "bar"));
+		Ex16MapJava<Number, String> map = new Ex16MapJava<Number, String>(new EntryJava<Number,String>(1, "fu"), new EntryJava<Number,String>(2, "bar"));
 		// Type mismatch: cannot convert from Ex16MapJava<Number,String> to Ex16MapJava<Integer,Object>
 //		Ex16MapJava<Integer, Object> moreGenericMap = map;
 		Ex16MapJava<? super Integer, ? extends Object> moreGenericMap = map;

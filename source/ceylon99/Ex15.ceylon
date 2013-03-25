@@ -4,8 +4,8 @@ class List<T>(T* elements) {
     }
 }
 
-class CovariantList<out TT>(TT* elements) {
-    shared TT? get(Integer i){
+class CovariantList<out T>(T* elements) {
+    shared T? get(Integer i){
         return elements[i];
     }
     // covariant (out) type parameter T appears in contravariant location in type: T

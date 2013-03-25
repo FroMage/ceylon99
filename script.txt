@@ -4,42 +4,44 @@ nexus vs Herd
 
 ---
 
-Ex01:
+Total: 68:00
+
+Ex01: 0:53
 
 - main functions
 - toplevel functions
 - how to compile/run
 
-Ex01_2:
+Ex02: 0:44
 
 - for loop iteration
 - segment literals
 
-Ex02:
+Ex03: 0:59
 
 - iterable literal
 - value type inference
 - for loop iterable iteration
 
-Ex03:
+Ex04: 3:31
 
 - union types
 - RHS inference 
 
-Ex04:
+Ex05: 1:45
 
 - intersection types
 
-Ex05:
+Ex06: 1:25
 
 - spread operator
 
-Ex06:
+Ex07: 2:21
 
 - map/comprehension
 - function literals
 
-Ex07:
+Ex08: 4:13
 
 - class attributes
 - class constructors
@@ -47,83 +49,83 @@ Ex07:
 - shortcut member refinement
 - string templates
 
-Ex07_2:
+Ex09: 2:19
 
 - getter/setter
 
-Ex08:
+Ex10: 6:05
 
 - initialisation order
 
-Ex09:
+Ex11: 3:01
 
 - default parameters
 - named param invocation
 
-Ex10:
+Ex12: 1:13
 
 - default parameters can use previous param values
 
-Ex11:
+Ex13: 4:38
 
 - mixin methods
 - fat arrow vs assignment
 - anonymous objects
 - abstract attributes
 
-Ex12:
+Ex14: 2:03
 
 - resolving of diamond inheritance issue (no java equivalent)
 
-Ex13:
+Ex15: 5:10
 
 - co-variance
 - variadic parameters
 
-Ex14:
+Ex16: 3:57
 
 - contra-variance
 - type parameter constraints
 
-Ex15:
+Ex17: 3:29
 
 - multiple inheritance of same interface
 - method co-variance
 
-Ex16:
+Ex18: 1:34
 
 - checked exceptions
 
-Ex17:
+Ex19: 6:41
 
 - function literals
 - function types
 - environment capture
 - Callable members and constructors
 
-Ex18:
+Ex20: 2:34
 
 - null safety
 - exists and type refinement
 
-Ex19:
+Ex21: 1:07
 
 - "is" and type refinement
 
-Ex20:
+Ex22: 2:17
 
 - modules
 - reified generics
 
-Ex21:
+Ex23: 2:22
 
 - assert
 
-Ex22:
+Ex24: 1:42
 
 - outer
 
-Ex23:
+Ex25: 1:42
 
 - equals
 

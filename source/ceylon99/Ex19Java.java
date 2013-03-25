@@ -13,7 +13,7 @@ interface Callable0Or1<Ret, Arg1> extends Callable0<Ret>, Callable1<Ret, Arg1>{}
 public class Ex19Java {
 
 	private int callMe(){
-		return 2;
+		return callMe(2);
 	}
 	
 	private int callMe(int i){
@@ -55,6 +55,7 @@ public class Ex19Java {
 				// oops!
 //				count++;
 //				otherResult += itsDangerousToGoAloneTakeThis;
+				System.out.println(itsDangerousToGoAloneTakeThis);
 				// mmmmm
 				return null;
 			}});

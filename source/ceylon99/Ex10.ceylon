@@ -2,12 +2,12 @@
 //    print(name);
 //    return name;
 //}
-String log(String name){
-    print(name);
-    return name;
-}
 
 class Ex10(){
+    String log(String name){
+        print(name);
+        return name;
+    }
     //String log(String name){
     //    print(name);
     //    // forward reference to class member in initializer: age is not yet declared (forward references must occur in declaration section)
@@ -16,7 +16,7 @@ class Ex10(){
     //}
 
     // forward reference to class member in initializer: log is not yet declared (forward references must occur in declaration section)
-    log("anonymous init");
+    //log("anonymous init");
 
     // leaks this reference in initializer: Ex10
     //log(this, "anonymous init");
