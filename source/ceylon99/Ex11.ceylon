@@ -1,5 +1,5 @@
-class Ex11(String firstName = "Gerard",
-           String lastName = "Dupond",
+class Ex11(String firstName = "Fredrik",
+           String lastName = firstName + "sen",
            Integer age = 20,
            String title = "M"){
     

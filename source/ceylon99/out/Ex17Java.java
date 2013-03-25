@@ -1,4 +1,4 @@
-package ceylon99;
+package ceylon99.out;
 
 interface CanIHasCloneJava<T> {
 	T gimmeClonez();

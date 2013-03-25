@@ -29,9 +29,17 @@ public class Ex08Java {
 		this.age = age;
 	}
 
+	public String getShouted() {
+		return name.toUpperCase();
+	}
+
+	public void setShouted(String value) {
+		this.name = value.toLowerCase();
+	}
+
 	@Override
 	public String toString() {
-		return "Name: " + name + ", Age: " + age;
+		return "Name: " + name + ", Shouted: " + getShouted() + ", Age: " + age;
 	}
 	
 	public static void main(String[] args) {

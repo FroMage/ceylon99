@@ -2,16 +2,9 @@ String neverNull(){
     return "hello";
 }
 
-//String sometimesNull(){
-//    if(process.nanoseconds % 2 == 0){
-//        // returned expression must be assignable to return type of sometimesNull: null is not assignable to String
-//        return null;
-//    }
-//    return "bonjour";
-//}
-
 String? sometimesNull(){
     if(process.nanoseconds % 2 == 0){
+        // returned expression must be assignable to return type of sometimesNull: null is not assignable to String
         return null;
     }
     return "bonjour";
@@ -23,7 +16,8 @@ void ex20(){
         // member method or attribute does not exist: uppercased in type String?
         //print(sometimesNull().uppercased);
         print(sometimesNull()?.uppercased);
-        if(exists str = sometimesNull()){
+        String? str = sometimesNull();
+        if(exists str){
             print(str.uppercased);
         }
     }

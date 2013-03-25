@@ -9,11 +9,11 @@ public class Ex11Java {
 	private String title;
 
 	public Ex11Java() {
-		this("Gerard");
+		this("Fredrik");
 	}
 	
 	public Ex11Java(String firstName) {
-		this(firstName, "Dupond");
+		this(firstName, firstName + "sen");
 	}
 	
 	public Ex11Java(String firstName, String lastName) {

@@ -1,8 +1,5 @@
 class Ex25(shared String name, shared Integer age){
     shared actual Boolean equals(Object that) {
-        if(is Identifiable that, that === this){
-            return true;
-        }
         if(is Ex25 that){
             return name == that.name && age == that.age;
         }

@@ -4,7 +4,7 @@ void ex05(){
     for(i in ints){
         // on Number
         print(i.float);
-        // on Invertable<Other>
+        // on Invertable<Number>
         print(i.negativeValue);
     }
 }
