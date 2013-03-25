@@ -1,7 +1,5 @@
-void ex3(){
-    // {<Integer|Float>+} ints
-    value ints = {1,2,3,3.0};
-    // Integer|Float i
+void ex03(){
+    value ints = {1,2,3};
     for(i in ints){
         print(i);
     }

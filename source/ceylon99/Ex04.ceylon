@@ -1,10 +1,8 @@
-void ex4(){
+void ex04(){
     // {<Integer|Float>+} ints
-    {Number&Invertable<Number>+} ints = {1,2,3,3.0};
+    value ints = {1,2,3,3.0};
+    // Integer|Float i
     for(i in ints){
-        // on Number
-        print(i.float);
-        // on Invertable<Other>
-        print(i.negativeValue);
+        print(i);
     }
 }

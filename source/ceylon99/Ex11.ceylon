@@ -1,40 +1,15 @@
-interface MyIterable<T>{
-    shared formal Iterator<T> iterator();
-    shared formal Integer size;
-
-    shared actual String string {
-        value sb = StringBuilder();
-        value it = iterator();
-        while(!is Finished item = it.next()){
-            if(sb.size > 0){
-                sb.append(", ");
-            }
-            sb.append(item?.string else "null");
-        }
-        return sb.string;
-    }
-}
-
-class Ex11List<T>(T* items) satisfies MyIterable<T>{
-    iterator() => items.iterator();
-
-    size = items.size;
-}
-
-class Ex11Range(Integer start, Integer count) satisfies MyIterable<Integer>{
-    shared actual Iterator<Integer> iterator(){
-        object it satisfies Iterator<Integer> {
-            variable Integer used = 0;
-            shared actual Integer|Finished next() => 
-                used >= count then finished else start + used++;
-        }
-        return it;
-    }
+class Ex11(String firstName = "Gerard",
+          String lastName = "Dupond",
+          Integer age = 20,
+          String title = "M"){
     
-    size = count;
+    string = "``title`` ``firstName`` ``lastName`` (``age``)";
 }
 
 void ex11(){
-    print(Ex11List(1, 2, 3));
-    print(Ex11Range(10, 4));
+    print(Ex11());
+    print(Ex11("Stef", "Epardaud", #22, "Dr"));
+    print(Ex11{ firstName = "Emmanuel"; lastName = "BJavaernard"; age = #23; title = "M"; });
+    print(Ex11{ title = "M"; firstName = "Emmanuel"; lastName = "BJavaernard"; age = #23; });
+    print(Ex11{ title = "Mlle"; });
 }

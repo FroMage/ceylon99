@@ -1,24 +1,40 @@
-class List<T>(T* elements) {
-    shared T? get(Integer i){
-        return elements[i];
+interface MyIterable<T>{
+    shared formal Iterator<T> iterator();
+    shared formal Integer size;
+
+    shared actual String string {
+        value sb = StringBuilder();
+        value it = iterator();
+        while(!is Finished item = it.next()){
+            if(sb.size > 0){
+                sb.append(", ");
+            }
+            sb.append(item?.string else "null");
+        }
+        return sb.string;
     }
 }
 
-class CovariantList<out TT>(TT* elements) {
-    shared TT? get(Integer i){
-        return elements[i];
+class Ex13List<T>(T* items) satisfies MyIterable<T>{
+    iterator() => items.iterator();
+
+    size = items.size;
+}
+
+class Ex13Range(Integer start, Integer count) satisfies MyIterable<Integer>{
+    shared actual Iterator<Integer> iterator(){
+        object it satisfies Iterator<Integer> {
+            variable Integer used = 0;
+            shared actual Integer|Finished next() => 
+                used >= count then finished else start + used++;
+        }
+        return it;
     }
-    // covariant (out) type parameter T appears in contravariant location in type: T
-    //shared void put(Integer i, T item){}
+    
+    size = count;
 }
 
 void ex13(){
-    List<String> invariantList = List("fu", "bar", "gee");
-    // specified expression must be assignable to declared type of listOfObjects: List<String> is not assignable to List<Object>
-    //List<Object> listOfObjects = invariantList;
-
-    CovariantList<String> covariantList = CovariantList("fu", "bar", "gee");
-    CovariantList<Object> listOfObjects = covariantList;
-    Object? o = listOfObjects.get(0);
-    print(o);
+    print(Ex13List(1, 2, 3));
+    print(Ex13Range(10, 4));
 }

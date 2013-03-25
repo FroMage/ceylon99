@@ -3,30 +3,32 @@ package ceylon99;
 
 public class Ex10Java {
 	
-	private int width;
-	private int height;
-
+	{
+		log("anonymous init");
+	}
+	
+	private String first = log("field init 1");
+	private Integer age;
+	
 	public Ex10Java() {
-		this(2);
+		log("init 1");
+		age = 2;
+		log("init 2");
 	}
 	
-	public Ex10Java(int width) {
-		this(width, width * 2);
+	{
+		log("anonymous init 2");
 	}
 	
-	public Ex10Java(int width, int height) {
-		this.width = width;
-		this.height = height;
-	}
+	private String second = log("field init 2");
 	
-	@Override
-	public String toString() {
-		return width + " * " + height;
+	private String log(String name){
+		System.out.println(name);
+		System.out.println(" age is: " + age);
+		return name;
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(new Ex10Java());
-		System.out.println(new Ex10Java(10));
-		System.out.println(new Ex10Java(10, 50));
+		new Ex10Java();
 	}
 }

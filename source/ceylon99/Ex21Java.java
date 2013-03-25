@@ -2,16 +2,19 @@ package ceylon99;
 
 public class Ex21Java {
 
-	public static void method(String message, Object arg){
-		assert message != null : "Missing message";
-		assert arg instanceof String || arg instanceof Number : "Unknown arg type: " + arg;
-		System.out.println(message+": "+arg);
+	public static void method(Object o){
+		if(o instanceof String){
+			System.out.println("Got a string: " + ((String)o).toUpperCase());
+		}else if(o instanceof Number){
+			System.out.println("Got a number: " + (((Number)o).intValue() < 0));
+		}else{
+			System.out.println("Well, no idea: "+o);
+		} 
 	}
 	
 	public static void main(String[] args) {
-		method("Hello", 2);
-		method("Hello", "you");
-		method("Hello", true);
-		method(null, 1);
+		method(1);
+		method("yo");
+		method(true);
 	}
 }

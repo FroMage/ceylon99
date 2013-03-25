@@ -1,15 +1,15 @@
-class Ex9(String firstName = "Gerard",
-          String lastName = "Dupond",
-          Integer age = 20,
-          String title = "M"){
+class Ex09(attr){
+    shared variable String attr;
+    shared String attr2 {
+        return attr.uppercased;
+    }
+    assign attr2 {
+        attr = attr2.lowercased;
+    }
     
-    string = "``title`` ``firstName`` ``lastName`` (``age``)";
+    string = "AJavattr: ``attr``, AJavattr2: ``attr2``";
 }
 
-void ex9(){
-    print(Ex9());
-    print(Ex9("Stef", "Epardaud", #22, "Dr"));
-    print(Ex9{ firstName = "Emmanuel"; lastName = "BJavaernard"; age = #23; title = "M"; });
-    print(Ex9{ title = "M"; firstName = "Emmanuel"; lastName = "BJavaernard"; age = #23; });
-    print(Ex9{ title = "Mlle"; });
+void ex09(){
+    print(Ex09("Hello"));
 }

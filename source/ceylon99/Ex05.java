@@ -1,18 +1,14 @@
 package ceylon99;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Ex05 {
 	public static void main(String[] args) {
-		List<Integer> ints = Arrays.asList(1, 2, 3);
-		List<Integer> more = new LinkedList<>();
-		for(Integer i : ints){
-			more.add(i + 1);
-		}
-		for(Integer i : more){
-			System.out.println(i);
+		List<? extends Object> items = Arrays.asList(1, 2, 3, 3.0);
+		for(Object i : items){
+			System.out.println(((Number)i).floatValue());
+			System.out.println(((Comparable<Number>)i).compareTo((Number)i));
 		}
 	}
 }

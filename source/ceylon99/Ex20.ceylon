@@ -1,23 +1,30 @@
-import ceylon.collection { LinkedList }
-import ceylon.language { List }
+String neverNull(){
+    return "hello";
+}
 
-class Ex20<T>(){
-    value store = LinkedList<T>();
-    
-    shared void addAllYouCan<Other>(List<Other> otherList){
-        for(other in otherList){
-            if(is T other){
-                store.add(other);
-            }
-        }
+//String sometimesNull(){
+//    if(process.nanoseconds % 2 == 0){
+//        // returned expression must be assignable to return type of sometimesNull: null is not assignable to String
+//        return null;
+//    }
+//    return "bonjour";
+//}
+
+String? sometimesNull(){
+    if(process.nanoseconds % 2 == 0){
+        return null;
     }
-    
-    string => store.string;
+    return "bonjour";
 }
 
 void ex20(){
-    value numbers = Ex20<Number>();
-    List<Object> floatsAndStrings = [1.2, 3.4, "hello"];
-    numbers.addAllYouCan(floatsAndStrings);
-    print(numbers);
+    for(i in 0:20){
+        print(neverNull().uppercased);
+        // member method or attribute does not exist: uppercased in type String?
+        //print(sometimesNull().uppercased);
+        print(sometimesNull()?.uppercased);
+        if(exists str = sometimesNull()){
+            print(str.uppercased);
+        }
+    }
 }

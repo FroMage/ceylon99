@@ -1,7 +1,10 @@
-void ex5(){
-    value ints = {1,2,3};
-    value more = ints*.plus(1);
-    for(i in more){
-        print(i);
+void ex05(){
+    // {<Integer|Float>+} ints
+    {Number&Invertable<Number>+} ints = {1,2,3,3.0};
+    for(i in ints){
+        // on Number
+        print(i.float);
+        // on Invertable<Other>
+        print(i.negativeValue);
     }
 }

@@ -1,14 +1,14 @@
-class Ex7(name, age){
-    shared variable String name;
-    shared variable Integer age;
-    
-    //shared actual String string = "Name: ``name``, AJavage: ``age``";
-    string = "Name: ``name``, AJavage: ``age``";
-}
-
-void ex7(){
-    value items = {Ex7("Stef", #22), Ex7("Emmanuel", $100011)};
-    for(item in items){
-        print(item);
+void ex07(){
+    value ints = {1,2,3};
+    // not efficient
+    //value more = ints*.plus(1)*.times(2);
+    value more = {for (i in ints) (i + 1) * 2};
+    for(i in more){
+        print(i);
+    }
+    // or...
+    value more2 = ints.map((Integer i) => (i + 1) * 2);
+    for(i in more2){
+        print(i);
     }
 }

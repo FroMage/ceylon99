@@ -1,6 +1,5 @@
-void ex2(){
-    value ints = {1,2,3};
-    for(i in ints){
+void ex02(){
+    for(i in 0:3){
         print(i);
     }
 }

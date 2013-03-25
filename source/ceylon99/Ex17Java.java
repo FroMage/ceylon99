@@ -1,79 +1,45 @@
 package ceylon99;
 
-interface Callable0<Ret>{
-	Ret call();
+interface CanIHasCloneJava<T> {
+	T gimmeClonez();
 }
 
-interface Callable1<Ret, Arg1>{
-	Ret call(Arg1 arg1);
+class AJava implements CanIHasCloneJava<AJava> {
+	@Override
+	public AJava gimmeClonez() {
+		return new AJava();
+	}
 }
 
-interface Callable0Or1<Ret, Arg1> extends Callable0<Ret>, Callable1<Ret, Arg1>{}
+// The interface CanIHasCloneJava cannot be implemented more than once with different arguments: CanIHasCloneJava<AJava> and CanIHasCloneJava<BJava>
+class BJava extends AJava /* implements CanIHasCloneJava<BJava> */ {
+	@Override
+	public BJava gimmeClonez() {
+		return new BJava();
+	}
+}
 
 public class Ex17Java {
-
-	private int callMe(){
-		return 2;
-	}
 	
-	private int callMe(int i){
-		return i;
-	}
-	
-	public void method(){
-		workWithMe(new Runnable(){
-			@Override
-			public void run() {
-				callMe();
-			}
-		});
-		workWithMeNoArg(new Callable0<Integer>(){
-			@Override
-			public Integer call() {
-				return callMe();
-			}
-		});
-		Callable0Or1<Integer,Integer> callMe = new Callable0Or1<Integer, Integer>(){
-			@Override
-			public Integer call() {
-				return callMe();
-			}
-			@Override
-			public Integer call(Integer arg1) {
-				return callMe(arg1);
-			}
-		};
-		workWithMeNoArg(callMe);
-		workWithMeOneArg(callMe, 3);
-		
-		final int itsDangerousToGoAloneTakeThis = 3;
-		int count = 0;
-		int otherResult = 0;
-		workWithMeNoArg(new Callable0<Void>(){
-			@Override
-			public Void call() {
-				// oops!
-//				count++;
-//				otherResult += itsDangerousToGoAloneTakeThis;
-				// mmmmm
-				return null;
-			}});
-	}
-	
-	// no type info!
-	private void workWithMe(Runnable runnable) {
-		runnable.run();
-	}
-
-	private <Ret> void workWithMeNoArg(Callable0<Ret> callable) {
-		System.out.println(callable.call());
-	}
-
-	private <Ret,Arg> void workWithMeOneArg(Callable1<Ret, Arg> callable, Arg a) {
-		System.out.println(callable.call(a));
-	}
-
 	public static void main(String[] args) {
-		new Ex17Java().method();
+		AJava a = new AJava();
+		AJava aClone = a.gimmeClonez();
+		CanIHasCloneJava<AJava> aCloneable = a;
+		aClone = aCloneable.gimmeClonez();
+		
+		BJava b = new BJava();
+		BJava bClone = b.gimmeClonez();
+		// Type mismatch: cannot convert from BJava to CanIHasCloneJava<BJava>
+//		CanIHasCloneJava<BJava> bCloneable = b;
+
+		// this works
+		CanIHasCloneJava<? extends AJava> bCloneable = b;
+		// well, almost: Type mismatch: cannot convert from capture#1-of ? extends AJava to BJava
+//		BJava bClone2 = bCloneable.gimmeClonez();
+
+		// this works???
+//		CanIHasCloneJava<? super BJava> bCloneable = b;
+		// well, almost: Type mismatch: cannot convert from capture#1-of ? super BJava to AJava
+//		AJava bClone2 = bCloneable.gimmeClonez();
 	}
 }

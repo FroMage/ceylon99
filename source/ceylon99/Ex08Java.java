@@ -1,34 +1,44 @@
 package ceylon99;
 
+import java.util.Arrays;
+import java.util.List;
 
 public class Ex08Java {
 	
-	{
-		log("anonymous init");
+	private String name;
+	private int age;
+	
+	public Ex08Java(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
 	}
 	
-	private String first = log("field init 1");
-	private Integer age;
-	
-	public Ex08Java() {
-		log("init 1");
-		age = 2;
-		log("init 2");
-	}
-	
-	{
-		log("anonymous init 2");
-	}
-	
-	private String second = log("field init 2");
-	
-	private String log(String name){
-		System.out.println(name);
-		System.out.println(" age is: " + age);
+	public String getName() {
 		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Name: " + name + ", Age: " + age;
 	}
 	
 	public static void main(String[] args) {
-		new Ex08Java();
+		List<Ex08Java> items = Arrays.asList(new Ex08Java("Stef", 0x22), new Ex08Java("Emmanuel", 0b100011));
+		for(Ex08Java item : items){
+			System.out.println(item);
+		}
 	}
 }

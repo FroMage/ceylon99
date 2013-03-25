@@ -1,45 +1,26 @@
 package ceylon99;
 
-interface CanIHasCloneJava<T> {
-	T gimmeClonez();
-}
-
-class AJava implements CanIHasCloneJava<AJava> {
-	@Override
-	public AJava gimmeClonez() {
-		return new AJava();
+class Ex15ListJava<T> {
+	
+	private T[] array;
+	
+	Ex15ListJava(T... elements){
+		array = elements;
 	}
-}
-
-// The interface CanIHasCloneJava cannot be implemented more than once with different arguments: CanIHasCloneJava<AJava> and CanIHasCloneJava<BJava>
-class BJava extends AJava /* implements CanIHasCloneJava<BJava> */ {
-	@Override
-	public BJava gimmeClonez() {
-		return new BJava();
+	
+	T get(int i){
+		return array[i];
 	}
 }
 
 public class Ex15Java {
 	
 	public static void main(String[] args) {
-		AJava a = new AJava();
-		AJava aClone = a.gimmeClonez();
-		CanIHasCloneJava<AJava> aCloneable = a;
-		aClone = aCloneable.gimmeClonez();
-		
-		BJava b = new BJava();
-		BJava bClone = b.gimmeClonez();
-		// Type mismatch: cannot convert from BJava to CanIHasCloneJava<BJava>
-//		CanIHasCloneJava<BJava> bCloneable = b;
-
-		// this works
-		CanIHasCloneJava<? extends AJava> bCloneable = b;
-		// well, almost: Type mismatch: cannot convert from capture#1-of ? extends AJava to BJava
-//		BJava bClone2 = bCloneable.gimmeClonez();
-
-		// this works???
-//		CanIHasCloneJava<? super BJava> bCloneable = b;
-		// well, almost: Type mismatch: cannot convert from capture#1-of ? super BJava to AJava
-//		AJava bClone2 = bCloneable.gimmeClonez();
+		Ex15ListJava<String> list = new Ex15ListJava<>("fu", "bar", "gee");
+		// Type mismatch: cannot convert from Ex15ListJava<String> to Ex13ListJava<Object>
+//		Ex15ListJava<Object> listOfObjects = list;
+		Ex15ListJava<? extends Object> listOfObjects = list;
+		Object object = listOfObjects.get(0);
+		System.out.println(object);
 	}
 }

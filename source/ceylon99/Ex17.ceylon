@@ -1,39 +1,28 @@
-class Ex17() {
 
-    Integer callMe(Integer i = 2){
-        return i;
-    }
-    
-    shared void method(){
-        workWithMeNoArg(callMe);
-        workWithMeOneArg(callMe, 3);
-        Integer(Integer=) callable = callMe;
-        callable();
-        callable(1111);
-        
-        Integer itsDangerousToGoAloneTakeThis = 3;
-        variable Integer count = 0;
-        variable Integer otherResult = 0;
-        workWithMeNoArg(void () {
-            count++;
-            otherResult += itsDangerousToGoAloneTakeThis;
-        });
-        print("count: ``count``, otherResult: ``otherResult``");
+interface CanIHasClone<out T> {
+    shared formal T gimmeClonez();
+}
 
-        workWithMeNoArg(Ex17);
+class A() satisfies CanIHasClone<A> {
+    shared actual default A gimmeClonez() {
+        return A();
     }
-    
-    void workWithMeNoArg<Ret>(Ret callable()) {
-        print(callable());
-    }
+}
 
-    void workWithMeOneArg<Ret,Arg>(Ret callable(Arg arg), Arg a) {
-        print(callable(a));
+class B() extends A() satisfies CanIHasClone<B> {
+    shared actual default B gimmeClonez() {
+        return B();
     }
-    
-    string => "Ex17, man";
 }
 
 void ex17(){
-    Ex17().method();
+    A a = A();
+    A aClone = a.gimmeClonez();
+    CanIHasClone<A> aCloneable = a;
+    A aClone2 = aCloneable.gimmeClonez();
+    
+    B b = B();
+    B bClone = b.gimmeClonez();
+    CanIHasClone<B> bCloneable = b;
+    B bClone2 = bCloneable.gimmeClonez();
 }

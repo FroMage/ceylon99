@@ -1,3 +1,9 @@
+TODO:
+
+nexus vs Herd
+
+---
+
 Ex01:
 
 - main functions
