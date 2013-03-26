@@ -1,4 +1,4 @@
-package ceylon99;
+package ceylon99.out;
 
 public class Ex25Java {
 

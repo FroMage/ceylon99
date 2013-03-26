@@ -43,7 +43,10 @@ public class Ex08Java {
 	}
 	
 	public static void main(String[] args) {
-		List<Ex08Java> items = Arrays.asList(new Ex08Java("Stef", 0x22), new Ex08Java("Emmanuel", 0b100011));
+		List<Ex08Java> items = Arrays.asList(
+		        new Ex08Java("Stef", 0x22), 
+		        new Ex08Java("Emmanuel", 0b100011)
+		);
 		for(Ex08Java item : items){
 			System.out.println(item);
 		}

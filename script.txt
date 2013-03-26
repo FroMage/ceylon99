@@ -1,6 +1,6 @@
 TODO:
 
-nexus vs Herd
+nexus vs Herd a la place de 18 checked exceptions?
 
 ---
 
@@ -69,15 +69,15 @@ Ex13: 3:48
 
 SS-TOTAL: 16
 
-Ex14: 1:38
+#Ex14: 1:38
+#
+#- resolving of diamond inheritance issue (no java equivalent)
 
-- resolving of diamond inheritance issue (no java equivalent)
-
-Ex16: 2:44
-
-- co-variance
-- contra-variance
-- variadic parameters
+#Ex16: 2:44
+#
+#- co-variance
+#- contra-variance
+#- variadic parameters
 
 #Ex17: 3:29
 #
@@ -109,16 +109,16 @@ Ex22: 1:26
 - modules
 - reified generics
 
-Ex23: 1:18
-
-- assert
+#Ex23: 1:18
+#
+#- assert
 
 #Ex24: 1:42
 #
 #- outer
 
-Ex25: 1:03
-
-- equals
+#Ex25: 1:03
+#
+#- equals
 
 
