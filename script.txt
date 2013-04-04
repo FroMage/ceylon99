@@ -1,47 +1,49 @@
+08FE69
+
 TODO:
 
 nexus vs Herd a la place de 18 checked exceptions?
 
 ---
 
-Total: 34:00
+Total: 29:40
 
-Ex01: 0:53
+Ex01: 1:39
 
 - main functions
 - toplevel functions
 - how to compile/run
 
-Ex02: 0:44
+Ex02: 0:52
 
 - for loop iteration
 - segment literals
 
-Ex03: 0:37
+Ex03: 0:56
 
 - iterable literal
 - value type inference
 - for loop iterable iteration
 
-Ex04: 2:52
+Ex04: 2:53
 
 - union types
 - RHS inference 
 
-Ex05: 1:22
+Ex05: 1:31
 
 - intersection types
 
-Ex06: 0:56
+Ex06: 1:01
 
 - spread operator
 
-Ex07: 1:57
+Ex07: 1:31
 
 - map/comprehension
 - function literals
 
-Ex08: 3:41
+Ex08: 2:30
 
 - class attributes
 - class constructors
@@ -54,20 +56,18 @@ Ex08: 3:41
 #
 #- initialisation order
 
-Ex11: 2:41
+Ex11: 2:15
 
 - default parameters
 - named param invocation
 - default parameters can use previous param values
 
-Ex13: 3:48
+Ex13: 2:26
 
 - mixin methods
 - fat arrow vs assignment
 - anonymous objects
 - abstract attributes
-
-SS-TOTAL: 16
 
 #Ex14: 1:38
 #
@@ -84,27 +84,27 @@ SS-TOTAL: 16
 #- multiple inheritance of same interface
 #- method co-variance
 
-Ex18: 1:14
+Ex18: 1:27
 
 - checked exceptions
 
-Ex19: 4:04
+Ex19: 5:28
 
 - function literals
 - function types
 - environment capture
 - Callable members and constructors
 
-Ex20: 1:42
+Ex20: 1:53
 
 - null safety
 - exists and type refinement
 
-Ex21: 0:53
+Ex21: 0:46
 
 - "is" and type refinement
 
-Ex22: 1:26
+Ex22: 1:21
 
 - modules
 - reified generics

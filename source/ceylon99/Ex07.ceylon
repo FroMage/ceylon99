@@ -7,7 +7,7 @@ void ex07(){
         print(i);
     }
     // or...
-    value more2 = ints.map((Integer i) => (i + 1) * 2);
+    value more2 = ints.map(function (Integer i) => (i + 1) * 2);
     for(i in more2){
         print(i);
     }
